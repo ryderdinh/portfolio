@@ -210,3 +210,28 @@ img {
 }
 
 /* --------------------CONTACT */
+.contact {
+    background: #111;
+}
+.formBx {
+    min-width: 60%;
+}
+.formBx form {
+    display: flex;
+    flex-direction: column;
+}
+.formBx form h3, .contactInfo h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formBx form input, .formBx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+}
