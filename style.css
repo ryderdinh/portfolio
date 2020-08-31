@@ -237,9 +237,11 @@ img {
     border: none;
     outline: none;
     background: #222;
+    color: white;
 }
 .formBx form textarea {
     min-height: 200px;
+    resize: none;
 }
 .formBx form input::placeholder, .formBx form textarea::placeholder {
     color: #999;
