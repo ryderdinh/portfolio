@@ -306,8 +306,8 @@ img {
     }
     .menu {
         position: fixed;
-        top: 76.8px;
-        left: -100%;
+        top: 80px;
+        right: -100%;
         display: block;
         padding: 100px 50px;
         text-align: center;
@@ -319,7 +319,7 @@ img {
         border-top: 1px solid rgba(0,0,0,0.2);
     }
     .menu.active {
-        left: 0;
+        right: 0;
     }
     header ul li a {
         color: #111;
