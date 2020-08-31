@@ -86,7 +86,7 @@ header.sticky ul li a{
 
 .btn {
     position: relative;
-    background: #2196f3;
+    background: yellowgreen;
     display: inline-block;
     color: #fff;
     margin-top: 20px;
@@ -128,3 +128,35 @@ img {
 }
 
 /* --------------------------SERVICES */
+.services {
+    background: #111;
+}
+.heading.white {
+    color: #fff;
+}
+.services .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+.services .content .servicesBx {
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: .5s;
+}
+.services .content .servicesBx:hover {
+    background: yellowgreen;
+}
+.services .content .servicesBx img{
+    max-width: 80px;
+    filter: invert(1);
+}
+.services .content .servicesBx h2{
+    font-size: 20px;
+    font-weight: 600;
+}
