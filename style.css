@@ -53,12 +53,18 @@ header ul li a{
     position: relative;
     display: inline-block;
     margin: 0 15px;
+    padding: 10px;
     color: #fff;
     text-decoration: none;
+    transition: .5s; 
+    border-radius: 2px;   
+}
+header ul li a:hover, header ul li a:active {
+    transition: .5s;
+    background: yellowgreen;
 }
 header.sticky ul li a{
     color: #111;
-    
 }
 /* --------------------------------BANNER */
 .banner {
@@ -99,6 +105,9 @@ header.sticky ul li a{
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+}
+.btn:hover {
+    background-color: rgb(157, 235, 2);
 }
 
 /* -------------------------------ABOUT */
@@ -326,6 +335,9 @@ img {
         font-size: 24px;
         margin: 10px;
     }
+    header ul li a:active {
+        background: yellowgreen;
+    }
     .toggle {
         width: 40px;
         height: 40px;
@@ -363,6 +375,9 @@ img {
         margin-top: 10px;
         padding: 10px 20px;
         font-size: 16px;
+    }
+    .btn:active {
+        background-color: rgb(157, 235, 2);
     }
     .heading h2 {
         font-weight: 24px;
