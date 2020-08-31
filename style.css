@@ -21,7 +21,7 @@ header {
     padding: 40px 100px;
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     transition: .5s;
 }
@@ -344,5 +344,49 @@ img {
     }
     header.sticky .toggle {
         filter: invert(1);
+    }
+    section {
+        padding: 90px 50px;
+    }
+    .banner {
+        padding: 150px 50px 100px;
+    }
+    .banner h2 {
+        font-size: 1.5em;
+    }
+    .banner h3 {
+        font-size: 1em;
+    }
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .heading h2 {
+        font-weight: 24px;
+    } 
+    .content {
+        flex-direction: column;
+    }
+    .contentBx h3 {
+        font-size: 20px;
+    }
+    .w50 {
+        margin-bottom: 20px;
+    }
+    .services .content .servicesBx {
+        margin: 10px
+    }
+    .work .content .workBx {
+        width: 100%;
+        padding: 0 0 10px 0;
+    }
+    .testimonials .content .testimonialsBx { 
+        max-width: calc(100% - 0px);
+        padding: 20px 20px;
+        margin: 0 0 10px 0;
+    }
+    .testimonials .content .testimonialsBx h3 {
+        margin-top: 10px;
     }
 }
