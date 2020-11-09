@@ -1,0 +1,287 @@
+/**
+ * @author Pastetu <dinhquanganhxl@gmail.com>
+ * Library classification : Button
+ * Please do not copy in any form. Thankyou!
+ */
+
+@font-face {
+  font-family: apex;
+  src: url(Apex\ Mk3-Medium.otf);
+}
+@font-face {
+  font-family: bevn;
+  src: url(BeVietnam-Medium.ttf);
+}
+@font-face {
+  font-family: dirga;
+  src: url(Dirga.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: apex;
+}
+
+/* body {
+  background-color: #031321;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+} */
+
+.btn-neon1,
+.btn-neon2 {
+  margin: 20px;
+  margin-bottom: 50px;
+  padding: 0;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* NEON 1------------------------------------------------------------------------ */
+#neon1 {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 24px;
+  transition: 0.2s;
+  overflow: hidden;
+  color: #2196f3;
+  margin-bottom: 20vh;
+}
+
+#neon1:hover {
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 0.45s;
+}
+
+#neon1 span {
+  position: absolute;
+  display: block;
+}
+
+#neon1 span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+#neon1:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+#neon1 span:nth-child(2) {
+  right: 0;
+  top: -100%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+#neon1:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+#neon1 span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+#neon1:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+}
+
+#neon1 span:nth-child(4) {
+  left: 0;
+  bottom: -100%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+#neon1:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+/* NEON 2------------------------------------------------------------------------ */
+#neon2 {
+  position: relative;
+  display: inline-block;
+  padding: 25px 40px;
+  /* margin: 40px 0; */
+  color: #2196f3;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+#neon2:hover {
+  background: #2196f3;
+  color: #031321;
+  box-shadow: 0 0 5px #2196f3, 0 0 25px #2196f3, 0 0 50px #2196f3,
+    0 0 200px #2196f3;
+}
+
+#neon2 span {
+  position: absolute;
+  display: block;
+}
+
+#neon2 span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+  animation: animate-1 1s linear infinite;
+}
+
+@keyframes animate-1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+#neon2 span:nth-child(2) {
+  top: -100%;
+  right: 0%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+  animation: animate-2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate-2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+#neon2 span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+  animation: animate-3 1s linear infinite;
+}
+
+@keyframes animate-3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+#neon2 span:nth-child(4) {
+  bottom: -100%;
+  left: 0%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2196f3);
+  animation: animate-4 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate-4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+/* TRANS 1------------------------------------------------------------------------ */
+.btn-trans1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-trans1 a {
+  position: relative;
+  width: 150px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  margin: 10px;
+  text-transform: uppercase;
+  background-color: #191919;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+.btn-trans1 a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: 0s ease-in;
+}
+.btn-trans1 a:hover span {
+  transform: translateY(-100%);
+  transition: 0.4s ease-in;
+}
+.btn-trans1 a:before {
+  content: "";
+  position: absolute;
+  bottom: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background-color: rgb(240, 58, 58);
+  border-radius: 50%;
+  transition: 0.4s ease-in;
+}
+.btn-trans1 a:hover:before {
+  bottom: -150px;
+}
