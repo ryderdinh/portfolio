@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 @font-face {
   font-family: Apex;
-  src: url(./library/paeu-lib/BeVietnam-Medium.ttf)
+  src: url(./library/paeu-lib/BeVietnam-Medium.ttf);
 }
 * {
   margin: 0;
@@ -9,6 +9,9 @@
   box-sizing: border-box;
   font-family: Apex;
   scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 0;
 }
 a {
   text-decoration: none;
@@ -41,6 +44,7 @@ header .logo {
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 2px;
+  outline: none;
 }
 header.sticky .logo {
   color: #111;
@@ -75,9 +79,7 @@ header.sticky ul li a {
 .banner {
   position: relative;
   min-height: 100vh;
-  background: url(./img/person.jpeg);
-  background-size: cover;
-  background-position: right;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,7 +99,18 @@ header.sticky ul li a {
   color: #fff;
   font-weight: 500;
 }
-
+.banner .blur {
+  z-index: -1;
+  width: 100%;
+  height: 101%;
+  background: url(./img/pexels-pixabay-220444.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .btn {
   position: relative;
   background: yellowgreen;
@@ -172,7 +185,6 @@ img {
 }
 .skill .content .skill-box img {
   max-width: 80px;
-
 }
 #img-end {
   filter: invert(1);
@@ -350,6 +362,9 @@ img {
   header ul li a:active {
     background: yellowgreen;
   }
+  header.sticky .toggle {
+    filter: invert(0);
+  }
   .toggle {
     width: 40px;
     height: 40px;
@@ -359,6 +374,7 @@ img {
     background-size: 30px;
     cursor: pointer;
     transition: 0.2s;
+    filter: invert(1);
   }
   .toggle.active {
     background: url(./img/icon/close.png);
@@ -367,6 +383,7 @@ img {
     background-size: 25px;
     cursor: pointer;
     transition: 0.2s;
+    filter: invert(1);
   }
   section {
     padding: 100px 50px;
