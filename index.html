@@ -37,7 +37,7 @@
 		</div>
 		<!-- NAVBAR -------------------------------------------------------------------------------------------------------->
 		<header>
-			<a href="#home" class="logo">Pu dev</a>
+			<a href="#home" class="logo"><span>Pu </span>dev</a>
 			<div class="toggle"></div>
 			<ul class="menu">
 				<li><a href="#home" onclick="toggleMenu()">Home</a></li>
@@ -58,9 +58,18 @@
 		<!-- BANNER -------------------------------------------------------------------------------------------------------->
 		<section class="banner" id="home">
 			<div class="text-box">
-				<h2>Hi, I'm <br /><span>dinhquanganh.</span></h2>
-				<h3>I'm Front End Web Developer.</h3>
-				<a href="#about" class="btn">About Me</a>
+				<div class="context">
+					<span id="typed1"></span>
+				</div>
+				<div class="context">
+					<span id="typed2"></span>
+				</div>
+				<div class="context">
+					<span id="typed3" style="line-height: 50px"></span>
+				</div>
+				<div class="btn">
+					<a href="#about">About Me</a>
+				</div>
 			</div>
 			<div class="blur"></div>
 		</section>
@@ -236,7 +245,7 @@
 				</div>
 			</div> -->
 			<div class="heading">
-				<a href="" class="btn">More</a>
+				<div class="btn btn-2"><a href="#">More</a></div>
 			</div>
 		</section>
 		<!-- END WORK -------------------------------------------------------------------------------------------------------->
@@ -419,6 +428,57 @@
 					dynamicBullets: true
 				}
 			});
+		</script>
+		<script src="./assets/library/typed.js/typed.min.js"></script>
+		<script>
+			let typed1 = new Typed('#typed1', {
+				strings: [`<h2>Hi, guys</h2>`, `<h2>Hi, I'm <br />`],
+				typeSpeed: 100,
+				backSpeed: 10,
+				backDelay: 500,
+				startDelay: 1000,
+				cursorChar: '_',
+				loop: false,
+				smartBackspace: true,
+				onComplete: function (self) {
+					document.querySelector('#typed1').classList.add('finished');
+					typeRow2();
+				}
+			});
+			function typeRow2() {
+				new Typed('#typed2', {
+					strings: [`<h2><span>dinhquanganh</span></h2>`],
+					typeSpeed: 50,
+					backSpeed: 10,
+					backDelay: 500,
+					startDelay: 10,
+					cursorChar: '_',
+					name: '#typed2',
+					loop: false,
+					smartBackspace: true,
+					onComplete: function () {
+						document
+							.querySelector('#typed2')
+							.classList.add('finished');
+						typeRow3();
+					}
+				});
+			}
+			function typeRow3() {
+				new Typed('#typed3', {
+					strings: [
+						`<h3>I'm Front End Web Developer</h3>`,
+						`<h3>I'm Web Designer</h3>`
+					],
+					typeSpeed: 50,
+					backSpeed: 10,
+					backDelay: 1000,
+					startDelay: 10,
+					cursorChar: '_',
+					loop: true,
+					smartBackspace: true
+				});
+			}
 		</script>
 		<script src="./assets/library/paeu-lib/paeu-button.js"></script>
 		<script src="./assets/script/firebase/contact.js"></script>
