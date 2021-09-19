@@ -88,9 +88,11 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Be2021', sans-serif;
-	font-weight: 500;
 	position: relative;
 	scroll-behavior: smooth;
+}
+body {
+	font-weight: 500;
 }
 body::-webkit-scrollbar {
 	width: 0;
@@ -351,6 +353,9 @@ header.sticky ul li a {
 	position: relative;
 	z-index: 2;
 }
+.context-typing {
+	height: 220px;
+}
 .context {
 	display: flex;
 }
@@ -457,6 +462,9 @@ header.sticky ul li a {
 	font-size: 24px;
 	margin-bottom: 10px;
 	font-weight: 600;
+}
+.content-box strong {
+	display: inline-block;
 }
 .w50 {
 	min-width: 50%;
