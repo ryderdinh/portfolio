@@ -126,6 +126,7 @@ header.sticky ul li a {
 	text-decoration: none;
 	letter-spacing: 2px;
 	font-weight: 500;
+	transition: all 0.3s ease-in-out;
 }
 .btn:hover {
 	background-color: rgb(157, 235, 2);
