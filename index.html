@@ -30,6 +30,11 @@
 	</head>
 
 	<body>
+		<!-- TOAST ------------------------------------------------------------------------------------------------------ -->
+		<div id="toast">
+			<div id="img"></div>
+			<div id="desc">...</div>
+		</div>
 		<!-- NAVBAR -------------------------------------------------------------------------------------------------------->
 		<header>
 			<a href="#home" class="logo">Pu dev</a>
@@ -328,20 +333,64 @@
 							name=""
 							id="name-contact"
 							placeholder="Full Name"
+							required
 						/>
 						<input
 							type="email"
 							name=""
 							id="email-contact"
-							placeholder="Mail"
+							required
+							placeholder="Your email"
 						/>
-						<textarea placeholder="Your Messenge"></textarea>
-						<input type="submit" value="Send" />
+						<textarea
+							placeholder="Enter your message"
+							required
+						></textarea>
+						<div class="send-message">
+							<div id="send-message" class="elm-send">Send</div>
+							<div class="send-loading elm-send hidden">
+								<span>↓</span>
+								<span style="--delay: 0.1s">↓</span>
+								<span style="--delay: 0.3s">↓</span>
+								<span style="--delay: 0.4s">↓</span>
+								<span style="--delay: 0.5s">↓</span>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</section>
 		<!-- END CONTACT -------------------------------------------------------------------------------------------------------->
+
+		<!-- FIREBASE -------------------------------------------------------------------------------------------------------->
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			var firebaseConfig = {
+				apiKey: 'AIzaSyDPLndEBLgD9__zTU02cqNNGv-5TSf00gY',
+				authDomain: 'portfolio-ea6a3.firebaseapp.com',
+				databaseURL: 'https://portfolio-ea6a3.firebaseio.com',
+				projectId: 'portfolio-ea6a3',
+				storageBucket: 'portfolio-ea6a3.appspot.com',
+				messagingSenderId: '929694205326',
+				appId: '1:929694205326:web:db7eff886fe46f560cd0df',
+				measurementId: 'G-HCWLT19FG5'
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			const db = firebase.firestore();
+		</script>
+		<!-- END FIREBASE -------------------------------------------------------------------------------------------------------->
 
 		<!-- COPYRIGHT -------------------------------------------------------------------------------------------------------->
 		<div class="copyright">
@@ -372,6 +421,7 @@
 			});
 		</script>
 		<script src="./assets/library/paeu-lib/paeu-button.js"></script>
+		<script src="./assets/script/firebase/contact.js"></script>
 		<script src="./assets/script/script.js"></script>
 	</body>
 </html>
