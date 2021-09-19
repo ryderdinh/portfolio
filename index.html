@@ -47,7 +47,7 @@
 			rel="stylesheet"
 			href="./assets/library/swiper/swiper-bundle.min.css"
 		/>
-
+		<link rel="stylesheet" href="./assets/css/cursor.css" />
 		<link rel="stylesheet" href="./assets/css/style.min.css" />
 	</head>
 
@@ -106,7 +106,7 @@
 		<!-- ABOUT -------------------------------------------------------------------------------------------------------->
 		<section class="about" id="about">
 			<div class="heading">
-				<h2>About Me</h2>
+				<h2 id="test">About Me</h2>
 			</div>
 			<div class="content">
 				<div class="content-box w50">
@@ -481,16 +481,6 @@
 		</script>
 		<script src="./assets/library/typed.js/typed.min.js"></script>
 		<script>
-			let typedkk = new Typed('title', {
-				strings: [`Hi,guys`, `Portfolio``Đinh Quang Anh Developer`],
-				typeSpeed: 100,
-				backSpeed: 20,
-				backDelay: 0,
-				startDelay: 1000,
-				cursorChar: '_',
-				loop: true,
-				smartBackspace: true
-			});
 			let typed1 = new Typed('#typed1', {
 				strings: [`<h2>Hi, guys</h2>`, `<h2>Hi, I'm <br />`],
 				typeSpeed: 100,
@@ -539,6 +529,8 @@
 					smartBackspace: true
 				});
 			}
+			console.log(screen.width);
+			console.log(screen.height);
 		</script>
 		<script src="./assets/script/firebase/contact.min.js"></script>
 		<script src="./assets/script/script.min.js"></script>
