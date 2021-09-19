@@ -87,6 +87,10 @@ header.sticky ul li a {
 	justify-content: space-between;
 	align-items: center;
 }
+.banner .text-box {
+	position: relative;
+	z-index: 2;
+}
 .banner h2 {
 	font-size: 3em;
 	color: #fff;
@@ -455,5 +459,10 @@ img {
 	}
 	.testimonials .content .testimonials-box h3 {
 		margin-top: 10px;
+	}
+}
+@media (max-width: 562px) {
+	.banner .blur {
+		right: -250px;
 	}
 }
