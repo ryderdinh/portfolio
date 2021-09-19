@@ -12,10 +12,11 @@ window.addEventListener('scroll', function () {
 });
 
 // When elements has class toggle click
-document
-	.querySelector('.toggle')
-	.addEventListener('click', toggleMenu);
+document.querySelector('.toggle').addEventListener('click', () => {
+	setTimeout(() => toggleMenu(), 500);
+});
 
+// Run toast
 function launch_toast(type, data) {
 	let listType = {
 		error: '<i class="fas fa-times bg-red"></i>',
