@@ -363,6 +363,9 @@ header ul li:hover::before {
 header ul li:hover a {
 	color: #3ab493;
 }
+.toggle {
+	display: none;
+}
 
 /* --------------------------------BANNER */
 .banner {
@@ -843,6 +846,25 @@ img {
 	}
 	.menu.active {
 		right: 0;
+
+		animation: menu-animate 1s linear;
+	}
+	@keyframes menu-animate {
+		0% {
+			border-left: 5px solid #041c4d;
+			right: -100%;
+		}
+		10% {
+			right: -95%;
+		}
+		75% {
+			right: -95%;
+			border-left: 50px solid #041c4d;
+		}
+		100% {
+			right: 0;
+			border-left: 0px solid transparent;
+		}
 	}
 	header ul li {
 		width: max-content;
