@@ -368,11 +368,26 @@ header ul li:hover a {
 .banner {
 	position: relative;
 	min-height: 100vh;
-	background: #0f1624;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	animation: animateBg 10s cubic-bezier(0.3, 0.7, 0.5, 0.3) infinite;
+	background-size: 100% 500%;
+	height: 100vh;
+	width: 100vw;
+	background-image: radial-gradient(
+		circle 610px at 5.2% 51.6%,
+		rgba(5, 8, 114, 1) 0%,
+		rgba(7, 3, 53, 1) 97.5%
+	);
+}
+@keyframes animateBg {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 0% 100%;
+	}
 }
 .banner .text-box {
 	position: relative;
@@ -425,6 +440,7 @@ header ul li:hover a {
 	transform: translateY(-50%);
 	right: 20px;
 }
+
 .btn {
 	font-weight: 600;
 	position: relative;
