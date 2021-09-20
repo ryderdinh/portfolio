@@ -95,13 +95,13 @@
 	padding: 0;
 	box-sizing: border-box;
 	position: relative;
+	scroll-behavior: smooth;
 }
 body {
 	font-family: 'Be2021', sans-serif;
 	font-weight: 500;
 	height: auto;
 	overflow: auto;
-	scroll-behavior: smooth;
 }
 body.load {
 	height: 100vh;

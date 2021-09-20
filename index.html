@@ -501,10 +501,10 @@
 		<script>
 			window.onload = () => {
 				setTimeout(() => {
-					window.scrollTo({ top: 0, left: 0 });
+					window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 					document.body.classList.remove('load');
 					document.body.classList.add('loaded');
-					window.scrollTo({ top: 0, left: 0 });
+					window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 				}, 2000);
 				setTimeout(() => {
 					typeRow1();
