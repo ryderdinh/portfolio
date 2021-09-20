@@ -377,8 +377,8 @@ header ul li:hover a {
 	width: 100vw;
 	background-image: radial-gradient(
 		circle 610px at 5.2% 51.6%,
-		rgba(5, 8, 114, 1) 0%,
-		rgba(7, 3, 53, 1) 97.5%
+		#041c4d 0%,
+		#0f1624 97.5%
 	);
 }
 @keyframes animateBg {
