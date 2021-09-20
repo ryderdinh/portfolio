@@ -65,8 +65,9 @@ console.log(
 	logInfoAuthor('#ffffff', '2em', 400)
 );
 console.log(
-	`%cNice!\n%cYou have screensize: %c${screen.width}%cx%c${screen.height}`,
-	logInfoGuessScreen('#F8BC00', '25px', '400', '1px 1px #d3d3d3'),
+	`%cYou have a%c nice %cscreen: %c${screen.width}%c x %c${screen.height}`,
+	logInfoGuessScreen('#0055ff', '15px', '400', '1px 1px #d3d3d3'),
+	logInfoGuessScreen('#F8BC00', '15px', '400', '1px 1px #d3d3d3'),
 	logInfoGuessScreen('#0055ff', '15px', '400', '1px 1px #d3d3d3'),
 	logInfoGuessScreen('#3ab493', '20px', '600', '1px 1px #d3d3d3'),
 	logInfoGuessScreen('#fff', '15px', '400', '1px 1px #d3d3d3'),
