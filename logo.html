@@ -14,6 +14,11 @@
 			href="assets/img/logo.svg"
 		/>
 		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
 			body {
 				width: 100vw;
 				height: 100vh;
@@ -22,22 +27,86 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				font-family: sans-serif;
 			}
-			img {
-				height: 70%;
-				animation: round 5s linear infinite;
+			.logo {
+				width: 400px;
+				max-width: 100%;
+				overflow: hidden;
+				transition: all 1s ease;
+				position: relative;
+				z-index: 101;
 			}
-			@keyframes round {
-				from {
-					transform: rotate(0deg);
-				}
-				to {
-					transform: rotate(360deg);
-				}
+
+			.logo img {
+				width: 100%;
+			}
+			.countClick {
+				position: fixed;
+				top: 10px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				opacity: 0;
+				visibility: hidden;
+				z-index: -1;
+				color: #fff;
+				font-size: 20px;
+				transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				text-align: center;
+			}
+			.countClick.active {
+				opacity: 1;
+				visibility: visible;
+				z-index: 100;
 			}
 		</style>
 	</head>
 	<body>
-		<img src="assets/img/logo.svg" alt="" />
+		<div class="logo"><img src="assets/img/logo.svg" alt="" /></div>
+		<div class="countClick"></div>
+		<script>
+			let v = 0,
+				countClick = 0;
+			document
+				.querySelector('.logo')
+				.addEventListener('mousedown', function () {
+					v += 10000;
+					countClick++;
+					this.style.transform = `scale(0.6) rotate(${v}deg)`;
+				});
+			document
+				.querySelector('.logo')
+				.addEventListener('mouseup', function () {
+					this.style.transform = `scale(1) rotate(${v}deg)`;
+					showCountClick();
+				});
+			function showCountClick() {
+				console.log(document.querySelector('.countClick').children);
+				if (
+					document.querySelector('.countClick').children.length > 5
+				) {
+					console.log(false);
+					document
+						.querySelector('.countClick')
+						.removeChild(
+							document.querySelector('.countClick').childNodes[0]
+						);
+				}
+				if (countClick % 10 == 0) {
+					document.querySelector('.countClick').innerHTML = `${
+						document.querySelector('.countClick').innerHTML
+					}<p>ohhhhhhhhhhhh</p>`;
+				} else
+					document.querySelector('.countClick').innerHTML = `${
+						document.querySelector('.countClick').innerHTML
+					}<p>${countClick} click!</p>`;
+				document.querySelector('.countClick').classList.add('active');
+				setTimeout(() => {
+					document
+						.querySelector('.countClick')
+						.classList.remove('active');
+				}, 5000);
+			}
+		</script>
 	</body>
 </html>
