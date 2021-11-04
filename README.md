@@ -1,4 +1,4 @@
-# Hi, there! I'm dinhquanganh 💠
+# Hi, there! I'm dinhquanganh 〽️
 
 ![view](https://komarev.com/ghpvc/?username=dinhquanganh&color=blue)
 ![follow](https://img.shields.io/github/followers/dinhquanganh?style=social)
